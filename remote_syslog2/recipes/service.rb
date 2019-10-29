@@ -1,4 +1,3 @@
-Chef::Log.info(platform("ubuntu"))
 Chef::Log.info(node[:platform_version])
 
 template '/etc/init.d/remote_syslog2' do
