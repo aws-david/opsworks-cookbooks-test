@@ -1,3 +1,6 @@
+Chef::Log.info(platform)
+Chef::Log.info(node[:platform_version])
+
 template '/etc/init.d/remote_syslog2' do
   source 'remote_syslog2.erb'
   mode '0755'
