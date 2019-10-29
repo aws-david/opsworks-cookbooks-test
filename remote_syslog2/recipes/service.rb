@@ -7,7 +7,6 @@ end
 if platform?("ubuntu") && node[:platform_version] == "18.04"
   execute '/bin/systemctl daemon-reload' do
     command 'systemctl daemon-reload'
-    action :nothing
   end
 end
 
