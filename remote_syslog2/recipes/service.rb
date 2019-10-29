@@ -5,7 +5,7 @@ template '/etc/init.d/remote_syslog2' do
 end
 
 if platform?("ubuntu") && node[:platform_version] == "18.04"
-  execute 'systemctl daemon-reload' do
+  execute '/bin/systemctl daemon-reload' do
     command 'systemctl daemon-reload'
     action :nothing
   end
