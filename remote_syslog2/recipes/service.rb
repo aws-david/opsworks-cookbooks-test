@@ -7,6 +7,9 @@ end
 service 'remote_syslog2' do
   supports restart: true, status: true
   action [:start, :enable]
+  if platform?("ubuntu") && node[:platform_version] == "18"
+    provider Chef::Provider::Service::Systemd
+  end
 end
 
 
